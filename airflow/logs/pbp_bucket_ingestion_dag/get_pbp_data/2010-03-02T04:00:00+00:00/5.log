@@ -1,0 +1,22 @@
+[2022-03-18 05:03:14,790] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-03-02T04:00:00+00:00 [queued]>
+[2022-03-18 05:03:15,017] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-03-02T04:00:00+00:00 [queued]>
+[2022-03-18 05:03:15,026] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-18 05:03:15,030] {taskinstance.py:1239} INFO - Starting attempt 5 of 5
+[2022-03-18 05:03:15,048] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-18 05:03:15,379] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): get_pbp_data> on 2010-03-02 04:00:00+00:00
+[2022-03-18 05:03:16,044] {standard_task_runner.py:52} INFO - Started process 443 to run task
+[2022-03-18 05:03:16,135] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pbp_bucket_ingestion_dag', 'get_pbp_data', 'scheduled__2010-03-02T04:00:00+00:00', '--job-id', '6355', '--raw', '--subdir', 'DAGS_FOLDER/pbp_ingestion_dag.py', '--cfg-path', '/tmp/tmpcl38eq4c', '--error-file', '/tmp/tmp6_n5d5rd']
+[2022-03-18 05:03:16,147] {standard_task_runner.py:77} INFO - Job 6355: Subtask get_pbp_data
+[2022-03-18 05:03:16,798] {logging_mixin.py:109} INFO - Running <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-03-02T04:00:00+00:00 [running]> on host 62e69f3f7a79
+[2022-03-18 05:03:17,042] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pbp_bucket_ingestion_dag
+AIRFLOW_CTX_TASK_ID=get_pbp_data
+AIRFLOW_CTX_EXECUTION_DATE=2010-03-02T04:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2010-03-02T04:00:00+00:00
+[2022-03-18 05:03:27,207] {python.py:175} INFO - Done. Returned value was: None
+[2022-03-18 05:03:27,599] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=pbp_bucket_ingestion_dag, task_id=get_pbp_data, execution_date=20100302T040000, start_date=20220318T050314, end_date=20220318T050327
+[2022-03-18 05:03:27,672] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-03-18 05:03:27,786] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,39 @@
+[2022-03-21 03:17:06,450] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.download_stocks_list scheduled__2022-03-20T00:00:00+00:00 [queued]>
+[2022-03-21 03:17:06,469] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.download_stocks_list scheduled__2022-03-20T00:00:00+00:00 [queued]>
+[2022-03-21 03:17:06,470] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-21 03:17:06,471] {taskinstance.py:1239} INFO - Starting attempt 4 of 5
+[2022-03-21 03:17:06,472] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-21 03:17:06,490] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): download_stocks_list> on 2022-03-20 00:00:00+00:00
+[2022-03-21 03:17:06,495] {standard_task_runner.py:52} INFO - Started process 108 to run task
+[2022-03-21 03:17:06,501] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_stocks_list', 'scheduled__2022-03-20T00:00:00+00:00', '--job-id', '6653', '--raw', '--subdir', 'DAGS_FOLDER/daily_stocks_dag.py', '--cfg-path', '/tmp/tmpu_3y8pjk', '--error-file', '/tmp/tmp5gr33u2y']
+[2022-03-21 03:17:06,503] {standard_task_runner.py:77} INFO - Job 6653: Subtask download_stocks_list
+[2022-03-21 03:17:06,674] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_stocks_list scheduled__2022-03-20T00:00:00+00:00 [running]> on host 2246d8bfb092
+[2022-03-21 03:17:06,843] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_stocks_list
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-20T00:00:00+00:00
+[2022-03-21 03:17:06,848] {logging_mixin.py:109} INFO - 0 : AAIT,
+[2022-03-21 03:17:06,874] {logging_mixin.py:109} WARNING - Exception in thread Thread-1:
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/threading.py", line 926, in _bootstrap_inner
+    self.run()
+  File "/usr/local/lib/python3.7/threading.py", line 870, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/***/.local/lib/python3.7/site-packages/multitasking/__init__.py", line 104, in _run_via_pool
+    return callee(*args, **kwargs)
+  File "/home/***/.local/lib/python3.7/site-packages/yfinance/multi.py", line 190, in _download_one_threaded
+    timeout)
+  File "/home/***/.local/lib/python3.7/site-packages/yfinance/multi.py", line 207, in _download_one
+    timeout=timeout)
+  File "/home/***/.local/lib/python3.7/site-packages/yfinance/base.py", line 159, in history
+    end = int(_time.mktime(_time.strptime(str(end), '%Y-%m-%d')))
+  File "/usr/local/lib/python3.7/_strptime.py", line 571, in _strptime_time
+    tt = _strptime(data_string, format)[0]
+  File "/usr/local/lib/python3.7/_strptime.py", line 359, in _strptime
+    (data_string, format))
+ValueError: time data ' 2022-03-20' does not match format '%Y-%m-%d'
+[2022-03-21 03:17:06,875] {logging_mixin.py:109} WARNING - 

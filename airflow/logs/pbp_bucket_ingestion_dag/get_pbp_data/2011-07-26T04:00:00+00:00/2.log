@@ -1,0 +1,18 @@
+[2022-03-18 15:30:10,274] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2011-07-26T04:00:00+00:00 [queued]>
+[2022-03-18 15:30:10,295] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2011-07-26T04:00:00+00:00 [queued]>
+[2022-03-18 15:30:10,297] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-18 15:30:10,298] {taskinstance.py:1239} INFO - Starting attempt 2 of 3
+[2022-03-18 15:30:10,302] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-18 15:30:10,322] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): get_pbp_data> on 2011-07-26 04:00:00+00:00
+[2022-03-18 15:30:10,333] {standard_task_runner.py:52} INFO - Started process 290 to run task
+[2022-03-18 15:30:10,339] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pbp_bucket_ingestion_dag', 'get_pbp_data', 'scheduled__2011-07-26T04:00:00+00:00', '--job-id', '6548', '--raw', '--subdir', 'DAGS_FOLDER/pbp_ingestion_dag.py', '--cfg-path', '/tmp/tmpg39h7rl3', '--error-file', '/tmp/tmpcpma_9e7']
+[2022-03-18 15:30:10,341] {standard_task_runner.py:77} INFO - Job 6548: Subtask get_pbp_data
+[2022-03-18 15:30:10,465] {logging_mixin.py:109} INFO - Running <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2011-07-26T04:00:00+00:00 [running]> on host 64466ce74801
+[2022-03-18 15:30:10,554] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pbp_bucket_ingestion_dag
+AIRFLOW_CTX_TASK_ID=get_pbp_data
+AIRFLOW_CTX_EXECUTION_DATE=2011-07-26T04:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2011-07-26T04:00:00+00:00

@@ -1,0 +1,23 @@
+[2022-03-17 02:44:15,755] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-05-09T04:00:00+00:00 [queued]>
+[2022-03-17 02:44:15,775] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-05-09T04:00:00+00:00 [queued]>
+[2022-03-17 02:44:15,776] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-17 02:44:15,777] {taskinstance.py:1239} INFO - Starting attempt 2 of 2
+[2022-03-17 02:44:15,778] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-17 02:44:15,794] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): get_pbp_data> on 2010-05-09 04:00:00+00:00
+[2022-03-17 02:44:15,802] {standard_task_runner.py:52} INFO - Started process 300 to run task
+[2022-03-17 02:44:15,807] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pbp_bucket_ingestion_dag', 'get_pbp_data', 'scheduled__2010-05-09T04:00:00+00:00', '--job-id', '5991', '--raw', '--subdir', 'DAGS_FOLDER/pbp_ingestion_dag.py', '--cfg-path', '/tmp/tmp5qrst46b', '--error-file', '/tmp/tmpmyxru6rq']
+[2022-03-17 02:44:15,809] {standard_task_runner.py:77} INFO - Job 5991: Subtask get_pbp_data
+[2022-03-17 02:44:15,893] {logging_mixin.py:109} INFO - Running <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-05-09T04:00:00+00:00 [running]> on host 0e12c27218bc
+[2022-03-17 02:44:15,964] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pbp_bucket_ingestion_dag
+AIRFLOW_CTX_TASK_ID=get_pbp_data
+AIRFLOW_CTX_EXECUTION_DATE=2010-05-09T04:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2010-05-09T04:00:00+00:00
+[2022-03-17 02:45:26,729] {connectionpool.py:781} WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f76dbaaf590>, 'Connection to oauth2.googleapis.com timed out. (connect timeout=60)')': /token
+[2022-03-17 02:45:41,193] {python.py:175} INFO - Done. Returned value was: None
+[2022-03-17 02:45:41,205] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=pbp_bucket_ingestion_dag, task_id=get_pbp_data, execution_date=20100509T040000, start_date=20220317T024415, end_date=20220317T024541
+[2022-03-17 02:45:41,261] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-03-17 02:45:41,293] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

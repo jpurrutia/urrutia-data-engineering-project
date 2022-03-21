@@ -1,0 +1,2080 @@
+[2022-03-21 04:33:55,715] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.download_stocks_list scheduled__2022-03-20T00:00:00+00:00 [queued]>
+[2022-03-21 04:33:55,731] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcs_dag.download_stocks_list scheduled__2022-03-20T00:00:00+00:00 [queued]>
+[2022-03-21 04:33:55,732] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-21 04:33:55,733] {taskinstance.py:1239} INFO - Starting attempt 14 of 15
+[2022-03-21 04:33:55,734] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-21 04:33:55,749] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_stocks_list> on 2022-03-20 00:00:00+00:00
+[2022-03-21 04:33:55,755] {standard_task_runner.py:52} INFO - Started process 1588 to run task
+[2022-03-21 04:33:55,760] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcs_dag', 'download_stocks_list', 'scheduled__2022-03-20T00:00:00+00:00', '--job-id', '6670', '--raw', '--subdir', 'DAGS_FOLDER/daily_stocks_dag.py', '--cfg-path', '/tmp/tmp8sfg89ga', '--error-file', '/tmp/tmp7xbjqst6']
+[2022-03-21 04:33:55,762] {standard_task_runner.py:77} INFO - Job 6670: Subtask download_stocks_list
+[2022-03-21 04:33:55,844] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcs_dag.download_stocks_list scheduled__2022-03-20T00:00:00+00:00 [running]> on host 9578924324f4
+[2022-03-21 04:33:55,923] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcs_dag
+AIRFLOW_CTX_TASK_ID=download_stocks_list
+AIRFLOW_CTX_EXECUTION_DATE=2022-03-20T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-03-20T00:00:00+00:00
+[2022-03-21 04:33:55,925] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-03-21 04:33:55,927] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'python3 /opt/***/dags/py_scripts/get_daily_stocks.py 2022-03-20']
+[2022-03-21 04:33:55,941] {subprocess.py:85} INFO - Output:
+[2022-03-21 04:33:57,667] {subprocess.py:89} INFO - 0 : AAIT,
+[2022-03-21 04:33:57,668] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:57,669] {subprocess.py:89} INFO - - AAIT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:57,669] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:57,670] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:57,670] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:57,820] {subprocess.py:89} INFO - 1 : AAL,
+[2022-03-21 04:33:57,820] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:57,821] {subprocess.py:89} INFO - - AAL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:57,822] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:57,823] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:57,824] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:58,051] {subprocess.py:89} INFO - 2 : AAME,
+[2022-03-21 04:33:58,111] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:58,112] {subprocess.py:89} INFO - - AAME: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:58,113] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:58,113] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:58,114] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:58,272] {subprocess.py:89} INFO - 3 : AAOI,
+[2022-03-21 04:33:58,273] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:58,274] {subprocess.py:89} INFO - - AAOI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:58,274] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:58,275] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:58,276] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:58,508] {subprocess.py:89} INFO - 4 : AAON,
+[2022-03-21 04:33:58,509] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:58,509] {subprocess.py:89} INFO - - AAON: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:58,510] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:58,511] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:58,512] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:58,715] {subprocess.py:89} INFO - 5 : AAPL,
+[2022-03-21 04:33:58,716] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:58,717] {subprocess.py:89} INFO - - AAPL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:58,718] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:58,719] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:58,720] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:58,898] {subprocess.py:89} INFO - 6 : AAVL,
+[2022-03-21 04:33:58,899] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:58,900] {subprocess.py:89} INFO - - AAVL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:58,900] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:58,901] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:58,902] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:59,037] {subprocess.py:89} INFO - 7 : AAWW,
+[2022-03-21 04:33:59,038] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:59,039] {subprocess.py:89} INFO - - AAWW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:59,040] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:59,040] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:59,041] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:59,230] {subprocess.py:89} INFO - 8 : AAXJ,
+[2022-03-21 04:33:59,231] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:59,232] {subprocess.py:89} INFO - - AAXJ: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:59,233] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:59,233] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:59,234] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:59,411] {subprocess.py:89} INFO - 9 : ABAC,
+[2022-03-21 04:33:59,412] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:59,414] {subprocess.py:89} INFO - - ABAC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:59,415] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:59,416] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:59,416] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:59,579] {subprocess.py:89} INFO - 10 : ABAX,
+[2022-03-21 04:33:59,580] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:59,580] {subprocess.py:89} INFO - - ABAX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:59,581] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:59,582] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:59,582] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:59,786] {subprocess.py:89} INFO - 11 : ABCB,
+[2022-03-21 04:33:59,787] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:59,788] {subprocess.py:89} INFO - - ABCB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:59,788] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:59,789] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:59,789] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:33:59,926] {subprocess.py:89} INFO - 12 : ABCD,
+[2022-03-21 04:33:59,927] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:33:59,928] {subprocess.py:89} INFO - - ABCD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:33:59,929] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:33:59,930] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:33:59,931] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:00,136] {subprocess.py:89} INFO - 13 : ABCO,
+[2022-03-21 04:34:00,137] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:00,138] {subprocess.py:89} INFO - - ABCO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:00,139] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:00,140] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:00,140] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:00,282] {subprocess.py:89} INFO - 14 : ABCW,
+[2022-03-21 04:34:00,283] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:00,284] {subprocess.py:89} INFO - - ABCW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:00,285] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:00,286] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:00,287] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:00,489] {subprocess.py:89} INFO - 15 : ABDC,
+[2022-03-21 04:34:00,490] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:00,491] {subprocess.py:89} INFO - - ABDC: No data found, symbol may be delisted
+[2022-03-21 04:34:00,492] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:00,493] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:00,494] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:00,655] {subprocess.py:89} INFO - 16 : ABGB,
+[2022-03-21 04:34:00,657] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:00,658] {subprocess.py:89} INFO - - ABGB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:00,660] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:00,661] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:00,661] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:00,875] {subprocess.py:89} INFO - 17 : ABIO,
+[2022-03-21 04:34:00,879] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:00,881] {subprocess.py:89} INFO - - ABIO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:00,883] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:00,884] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:00,885] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:01,100] {subprocess.py:89} INFO - 18 : ABMD,
+[2022-03-21 04:34:01,101] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:01,101] {subprocess.py:89} INFO - - ABMD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:01,102] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:01,103] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:01,103] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:01,313] {subprocess.py:89} INFO - 19 : ABTL,
+[2022-03-21 04:34:01,314] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:01,314] {subprocess.py:89} INFO - - ABTL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:01,315] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:01,316] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:01,316] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:01,461] {subprocess.py:89} INFO - 20 : ABY,
+[2022-03-21 04:34:01,462] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:01,462] {subprocess.py:89} INFO - - ABY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:01,463] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:01,463] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:01,464] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:01,601] {subprocess.py:89} INFO - 21 : ACAD,
+[2022-03-21 04:34:01,602] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:01,603] {subprocess.py:89} INFO - - ACAD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:01,604] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:01,605] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:01,605] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:01,817] {subprocess.py:89} INFO - 22 : ACAS,
+[2022-03-21 04:34:01,818] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:01,818] {subprocess.py:89} INFO - - ACAS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:01,819] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:01,820] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:01,820] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:02,026] {subprocess.py:89} INFO - 23 : ACAT,
+[2022-03-21 04:34:02,027] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:02,028] {subprocess.py:89} INFO - - ACAT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:02,029] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:02,030] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:02,030] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:02,230] {subprocess.py:89} INFO - 24 : ACET,
+[2022-03-21 04:34:02,231] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:02,232] {subprocess.py:89} INFO - - ACET: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:02,233] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:02,233] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:02,234] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:02,381] {subprocess.py:89} INFO - 25 : ACFC,
+[2022-03-21 04:34:02,382] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:02,383] {subprocess.py:89} INFO - - ACFC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:02,384] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:02,385] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:02,386] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:02,555] {subprocess.py:89} INFO - 26 : ACFN,
+[2022-03-21 04:34:02,556] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:02,556] {subprocess.py:89} INFO - - ACFN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:02,557] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:02,558] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:02,559] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:02,711] {subprocess.py:89} INFO - 27 : ACGL,
+[2022-03-21 04:34:02,712] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:02,713] {subprocess.py:89} INFO - - ACGL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:02,715] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:02,715] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:02,716] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:02,849] {subprocess.py:89} INFO - 28 : ACHC,
+[2022-03-21 04:34:02,850] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:02,851] {subprocess.py:89} INFO - - ACHC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:02,851] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:02,852] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:02,853] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:03,052] {subprocess.py:89} INFO - 29 : ACHN,
+[2022-03-21 04:34:03,053] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:03,054] {subprocess.py:89} INFO - - ACHN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:03,055] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:03,056] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:03,056] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:03,230] {subprocess.py:89} INFO - 30 : ACIW,
+[2022-03-21 04:34:03,231] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:03,232] {subprocess.py:89} INFO - - ACIW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:03,232] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:03,233] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:03,234] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:03,426] {subprocess.py:89} INFO - 31 : ACLS,
+[2022-03-21 04:34:03,427] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:03,428] {subprocess.py:89} INFO - - ACLS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:03,429] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:03,429] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:03,430] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:03,615] {subprocess.py:89} INFO - 32 : ACNB,
+[2022-03-21 04:34:03,616] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:03,616] {subprocess.py:89} INFO - - ACNB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:03,617] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:03,618] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:03,618] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:03,751] {subprocess.py:89} INFO - 33 : ACOR,
+[2022-03-21 04:34:03,751] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:03,752] {subprocess.py:89} INFO - - ACOR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:03,752] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:03,753] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:03,753] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:03,921] {subprocess.py:89} INFO - 34 : ACPW,
+[2022-03-21 04:34:03,922] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:03,923] {subprocess.py:89} INFO - - ACPW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:03,923] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:03,924] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:03,925] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:04,066] {subprocess.py:89} INFO - 35 : ACRX,
+[2022-03-21 04:34:04,067] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:04,068] {subprocess.py:89} INFO - - ACRX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:04,068] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:04,069] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:04,069] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:04,237] {subprocess.py:89} INFO - 36 : ACSF,
+[2022-03-21 04:34:04,238] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:04,239] {subprocess.py:89} INFO - - ACSF: No data found, symbol may be delisted
+[2022-03-21 04:34:04,239] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:04,240] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:04,240] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:04,415] {subprocess.py:89} INFO - 37 : ACST,
+[2022-03-21 04:34:04,416] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:04,420] {subprocess.py:89} INFO - - ACST: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:04,421] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:04,421] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:04,422] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:04,618] {subprocess.py:89} INFO - 38 : ACTA,
+[2022-03-21 04:34:04,619] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:04,619] {subprocess.py:89} INFO - - ACTA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:04,620] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:04,620] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:04,621] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:04,791] {subprocess.py:89} INFO - 39 : ACTG,
+[2022-03-21 04:34:04,792] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:04,793] {subprocess.py:89} INFO - - ACTG: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:04,793] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:04,794] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:04,795] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:05,003] {subprocess.py:89} INFO - 40 : ACTS,
+[2022-03-21 04:34:05,004] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:05,005] {subprocess.py:89} INFO - - ACTS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:05,006] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:05,007] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:05,007] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:05,185] {subprocess.py:89} INFO - 41 : ACUR,
+[2022-03-21 04:34:05,186] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:05,187] {subprocess.py:89} INFO - - ACUR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:05,187] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:05,188] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:05,188] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:05,407] {subprocess.py:89} INFO - 42 : ACWI,
+[2022-03-21 04:34:05,408] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:05,408] {subprocess.py:89} INFO - - ACWI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:05,409] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:05,410] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:05,410] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:05,557] {subprocess.py:89} INFO - 43 : ACWX,
+[2022-03-21 04:34:05,558] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:05,559] {subprocess.py:89} INFO - - ACWX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:05,560] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:05,560] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:05,561] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:05,726] {subprocess.py:89} INFO - 44 : ACXM,
+[2022-03-21 04:34:05,727] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:05,728] {subprocess.py:89} INFO - - ACXM: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:05,729] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:05,730] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:05,730] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:05,926] {subprocess.py:89} INFO - 45 : ADAT,
+[2022-03-21 04:34:05,927] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:05,927] {subprocess.py:89} INFO - - ADAT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:05,928] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:05,929] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:05,930] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:06,091] {subprocess.py:89} INFO - 46 : ADBE,
+[2022-03-21 04:34:06,093] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:06,093] {subprocess.py:89} INFO - - ADBE: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:06,094] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:06,095] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:06,095] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:06,262] {subprocess.py:89} INFO - 47 : ADEP,
+[2022-03-21 04:34:06,263] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:06,263] {subprocess.py:89} INFO - - ADEP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:06,264] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:06,264] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:06,265] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:06,399] {subprocess.py:89} INFO - 48 : ADES,
+[2022-03-21 04:34:06,400] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:06,401] {subprocess.py:89} INFO - - ADES: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:06,402] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:06,402] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:06,403] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:06,577] {subprocess.py:89} INFO - 49 : ADHD,
+[2022-03-21 04:34:06,578] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:06,579] {subprocess.py:89} INFO - - ADHD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:06,580] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:06,581] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:06,581] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:06,780] {subprocess.py:89} INFO - 50 : ADI,
+[2022-03-21 04:34:06,781] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:06,782] {subprocess.py:89} INFO - - ADI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:06,783] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:06,783] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:06,784] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:06,919] {subprocess.py:89} INFO - 51 : ADMA,
+[2022-03-21 04:34:06,920] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:06,922] {subprocess.py:89} INFO - - ADMA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:06,924] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:06,925] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:06,926] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:07,098] {subprocess.py:89} INFO - 52 : ADMP,
+[2022-03-21 04:34:07,099] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:07,100] {subprocess.py:89} INFO - - ADMP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:07,101] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:07,101] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:07,102] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:07,236] {subprocess.py:89} INFO - 53 : ADMS,
+[2022-03-21 04:34:07,237] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:07,237] {subprocess.py:89} INFO - - ADMS: No data found, symbol may be delisted
+[2022-03-21 04:34:07,238] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:07,239] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:07,239] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:07,378] {subprocess.py:89} INFO - 54 : ADNC,
+[2022-03-21 04:34:07,379] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:07,381] {subprocess.py:89} INFO - - ADNC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:07,382] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:07,384] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:07,385] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:07,594] {subprocess.py:89} INFO - 55 : ADP,
+[2022-03-21 04:34:07,595] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:07,596] {subprocess.py:89} INFO - - ADP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:07,597] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:07,597] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:07,598] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:07,773] {subprocess.py:89} INFO - 56 : ADRA,
+[2022-03-21 04:34:07,774] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:07,775] {subprocess.py:89} INFO - - ADRA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:07,775] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:07,776] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:07,777] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:08,020] {subprocess.py:89} INFO - 57 : ADRD,
+[2022-03-21 04:34:08,021] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:08,022] {subprocess.py:89} INFO - - ADRD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:08,022] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:08,023] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:08,024] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:08,232] {subprocess.py:89} INFO - 58 : ADRE,
+[2022-03-21 04:34:08,234] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:08,235] {subprocess.py:89} INFO - - ADRE: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:08,235] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:08,236] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:08,237] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:08,492] {subprocess.py:89} INFO - 59 : ADRU,
+[2022-03-21 04:34:08,494] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:08,494] {subprocess.py:89} INFO - - ADRU: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:08,495] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:08,497] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:08,498] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:08,685] {subprocess.py:89} INFO - 60 : ADSK,
+[2022-03-21 04:34:08,687] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:08,688] {subprocess.py:89} INFO - - ADSK: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:08,689] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:08,690] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:08,691] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:08,861] {subprocess.py:89} INFO - 61 : ADTN,
+[2022-03-21 04:34:08,862] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:08,863] {subprocess.py:89} INFO - - ADTN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:08,864] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:08,864] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:08,865] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:09,066] {subprocess.py:89} INFO - 62 : ADUS,
+[2022-03-21 04:34:09,067] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:09,068] {subprocess.py:89} INFO - - ADUS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:09,068] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:09,069] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:09,070] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:09,240] {subprocess.py:89} INFO - 63 : ADVS,
+[2022-03-21 04:34:09,241] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:09,241] {subprocess.py:89} INFO - - ADVS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:09,242] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:09,243] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:09,243] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:09,411] {subprocess.py:89} INFO - 64 : ADXS,
+[2022-03-21 04:34:09,412] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:09,413] {subprocess.py:89} INFO - - ADXS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:09,413] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:09,414] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:09,415] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:09,610] {subprocess.py:89} INFO - 65 : ADXSW,
+[2022-03-21 04:34:09,611] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:09,612] {subprocess.py:89} INFO - - ADXSW: No data found, symbol may be delisted
+[2022-03-21 04:34:09,613] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:09,613] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:09,614] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:09,796] {subprocess.py:89} INFO - 66 : AEGN,
+[2022-03-21 04:34:09,797] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:09,798] {subprocess.py:89} INFO - - AEGN: No data found, symbol may be delisted
+[2022-03-21 04:34:09,799] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:09,800] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:09,800] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:09,976] {subprocess.py:89} INFO - 67 : AEGR,
+[2022-03-21 04:34:09,977] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:09,978] {subprocess.py:89} INFO - - AEGR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:09,979] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:09,980] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:09,980] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:10,182] {subprocess.py:89} INFO - 68 : AEHR,
+[2022-03-21 04:34:10,183] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:10,184] {subprocess.py:89} INFO - - AEHR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:10,184] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:10,185] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:10,185] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:10,391] {subprocess.py:89} INFO - 69 : AEIS,
+[2022-03-21 04:34:10,392] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:10,393] {subprocess.py:89} INFO - - AEIS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:10,394] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:10,394] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:10,395] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:10,571] {subprocess.py:89} INFO - 70 : AEPI,
+[2022-03-21 04:34:10,572] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:10,573] {subprocess.py:89} INFO - - AEPI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:10,574] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:10,575] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:10,575] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:10,750] {subprocess.py:89} INFO - 71 : AERI,
+[2022-03-21 04:34:10,751] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:10,751] {subprocess.py:89} INFO - - AERI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:10,753] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:10,754] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:10,754] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:10,890] {subprocess.py:89} INFO - 72 : AETI,
+[2022-03-21 04:34:10,891] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:10,892] {subprocess.py:89} INFO - - AETI: No data found, symbol may be delisted
+[2022-03-21 04:34:10,892] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:10,893] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:10,893] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:11,095] {subprocess.py:89} INFO - 73 : AEY,
+[2022-03-21 04:34:11,096] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:11,097] {subprocess.py:89} INFO - - AEY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:11,098] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:11,098] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:11,099] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:11,236] {subprocess.py:89} INFO - 74 : AEZS,
+[2022-03-21 04:34:11,237] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:11,238] {subprocess.py:89} INFO - - AEZS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:11,239] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:11,240] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:11,240] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:11,409] {subprocess.py:89} INFO - 75 : AFAM,
+[2022-03-21 04:34:11,410] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:11,411] {subprocess.py:89} INFO - - AFAM: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:11,411] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:11,412] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:11,413] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:11,591] {subprocess.py:89} INFO - 76 : AFCB,
+[2022-03-21 04:34:11,592] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:11,592] {subprocess.py:89} INFO - - AFCB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:11,593] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:11,593] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:11,594] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:11,767] {subprocess.py:89} INFO - 77 : AFFX,
+[2022-03-21 04:34:11,769] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:11,769] {subprocess.py:89} INFO - - AFFX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:11,770] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:11,771] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:11,772] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:11,940] {subprocess.py:89} INFO - 78 : AFH,
+[2022-03-21 04:34:11,941] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:11,941] {subprocess.py:89} INFO - - AFH: No data found, symbol may be delisted
+[2022-03-21 04:34:11,942] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:11,943] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:11,943] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:12,153] {subprocess.py:89} INFO - 79 : AFMD,
+[2022-03-21 04:34:12,154] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:12,154] {subprocess.py:89} INFO - - AFMD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:12,155] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:12,156] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:12,156] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:12,304] {subprocess.py:89} INFO - 80 : AFOP,
+[2022-03-21 04:34:12,305] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:12,306] {subprocess.py:89} INFO - - AFOP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:12,307] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:12,307] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:12,308] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:12,507] {subprocess.py:89} INFO - 81 : AFSI,
+[2022-03-21 04:34:12,508] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:12,509] {subprocess.py:89} INFO - - AFSI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:12,510] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:12,511] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:12,512] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:12,680] {subprocess.py:89} INFO - 82 : AGEN,
+[2022-03-21 04:34:12,681] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:12,682] {subprocess.py:89} INFO - - AGEN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:12,683] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:12,684] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:12,685] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:12,834] {subprocess.py:89} INFO - 83 : AGII,
+[2022-03-21 04:34:12,835] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:12,836] {subprocess.py:89} INFO - - AGII: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:12,837] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:12,838] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:12,838] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:13,064] {subprocess.py:89} INFO - 84 : AGIIL,
+[2022-03-21 04:34:13,065] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:13,066] {subprocess.py:89} INFO - - AGIIL: No data found, symbol may be delisted
+[2022-03-21 04:34:13,067] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:13,067] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:13,068] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:13,244] {subprocess.py:89} INFO - 85 : AGIO,
+[2022-03-21 04:34:13,245] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:13,246] {subprocess.py:89} INFO - - AGIO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:13,247] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:13,248] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:13,248] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:13,436] {subprocess.py:89} INFO - 86 : AGNC,
+[2022-03-21 04:34:13,437] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:13,438] {subprocess.py:89} INFO - - AGNC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:13,438] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:13,439] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:13,440] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:13,603] {subprocess.py:89} INFO - 87 : AGNCB,
+[2022-03-21 04:34:13,604] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:13,605] {subprocess.py:89} INFO - - AGNCB: No data found, symbol may be delisted
+[2022-03-21 04:34:13,605] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:13,606] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:13,607] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:13,752] {subprocess.py:89} INFO - 88 : AGNCP,
+[2022-03-21 04:34:13,753] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:13,754] {subprocess.py:89} INFO - - AGNCP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:13,755] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:13,756] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:13,757] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:13,927] {subprocess.py:89} INFO - 89 : AGND,
+[2022-03-21 04:34:13,929] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:13,929] {subprocess.py:89} INFO - - AGND: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:13,930] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:13,931] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:13,931] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:14,100] {subprocess.py:89} INFO - 90 : AGRX,
+[2022-03-21 04:34:14,100] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:14,101] {subprocess.py:89} INFO - - AGRX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:14,102] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:14,102] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:14,103] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:14,277] {subprocess.py:89} INFO - 91 : AGTC,
+[2022-03-21 04:34:14,278] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:14,279] {subprocess.py:89} INFO - - AGTC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:14,280] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:14,280] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:14,281] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:14,514] {subprocess.py:89} INFO - 92 : AGYS,
+[2022-03-21 04:34:14,515] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:14,516] {subprocess.py:89} INFO - - AGYS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:14,517] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:14,518] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:14,519] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:14,708] {subprocess.py:89} INFO - 93 : AGZD,
+[2022-03-21 04:34:14,708] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:14,709] {subprocess.py:89} INFO - - AGZD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:14,710] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:14,710] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:14,711] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:14,893] {subprocess.py:89} INFO - 94 : AHGP,
+[2022-03-21 04:34:14,895] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:14,895] {subprocess.py:89} INFO - - AHGP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:14,896] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:14,897] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:14,898] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:15,072] {subprocess.py:89} INFO - 95 : AHPI,
+[2022-03-21 04:34:15,073] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:15,074] {subprocess.py:89} INFO - - AHPI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:15,074] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:15,075] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:15,075] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:15,256] {subprocess.py:89} INFO - 96 : AIMC,
+[2022-03-21 04:34:15,256] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:15,257] {subprocess.py:89} INFO - - AIMC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:15,257] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:15,258] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:15,259] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:15,416] {subprocess.py:89} INFO - 97 : AINV,
+[2022-03-21 04:34:15,417] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:15,418] {subprocess.py:89} INFO - - AINV: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:15,419] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:15,420] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:15,420] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:15,625] {subprocess.py:89} INFO - 98 : AIQ,
+[2022-03-21 04:34:15,626] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:15,627] {subprocess.py:89} INFO - - AIQ: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:15,628] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:15,628] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:15,629] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:15,803] {subprocess.py:89} INFO - 99 : AIRM,
+[2022-03-21 04:34:15,804] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:15,805] {subprocess.py:89} INFO - - AIRM: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:15,805] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:15,806] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:15,807] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:16,025] {subprocess.py:89} INFO - 100 : AIRR,
+[2022-03-21 04:34:16,026] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:16,026] {subprocess.py:89} INFO - - AIRR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:16,027] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:16,027] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:16,028] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:16,262] {subprocess.py:89} INFO - 101 : AIRT,
+[2022-03-21 04:34:16,263] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:16,264] {subprocess.py:89} INFO - - AIRT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:16,264] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:16,265] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:16,266] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:16,476] {subprocess.py:89} INFO - 102 : AIXG,
+[2022-03-21 04:34:16,478] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:16,479] {subprocess.py:89} INFO - - AIXG: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:16,480] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:16,481] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:16,482] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:16,658] {subprocess.py:89} INFO - 103 : AKAM,
+[2022-03-21 04:34:16,659] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:16,661] {subprocess.py:89} INFO - - AKAM: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:16,662] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:16,662] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:16,663] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:16,812] {subprocess.py:89} INFO - 104 : AKAO,
+[2022-03-21 04:34:16,814] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:16,815] {subprocess.py:89} INFO - - AKAO: No data found, symbol may be delisted
+[2022-03-21 04:34:16,815] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:16,816] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:16,817] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:16,957] {subprocess.py:89} INFO - 105 : AKBA,
+[2022-03-21 04:34:16,958] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:16,959] {subprocess.py:89} INFO - - AKBA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:16,960] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:16,961] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:16,961] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:17,140] {subprocess.py:89} INFO - 106 : AKER,
+[2022-03-21 04:34:17,141] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:17,142] {subprocess.py:89} INFO - - AKER: No data found, symbol may be delisted
+[2022-03-21 04:34:17,143] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:17,144] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:17,145] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:17,316] {subprocess.py:89} INFO - 107 : AKRX,
+[2022-03-21 04:34:17,317] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:17,318] {subprocess.py:89} INFO - - AKRX: No data found, symbol may be delisted
+[2022-03-21 04:34:17,319] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:17,319] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:17,320] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:17,576] {subprocess.py:89} INFO - 108 : ALCO,
+[2022-03-21 04:34:17,577] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:17,577] {subprocess.py:89} INFO - - ALCO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:17,578] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:17,578] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:17,579] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:17,756] {subprocess.py:89} INFO - 109 : ALDR,
+[2022-03-21 04:34:17,757] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:17,757] {subprocess.py:89} INFO - - ALDR: No data found, symbol may be delisted
+[2022-03-21 04:34:17,758] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:17,758] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:17,759] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:17,916] {subprocess.py:89} INFO - 110 : ALDX,
+[2022-03-21 04:34:17,917] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:17,918] {subprocess.py:89} INFO - - ALDX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:17,918] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:17,919] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:17,920] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:18,088] {subprocess.py:89} INFO - 111 : ALGN,
+[2022-03-21 04:34:18,088] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:18,089] {subprocess.py:89} INFO - - ALGN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:18,089] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:18,090] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:18,090] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:18,275] {subprocess.py:89} INFO - 112 : ALGT,
+[2022-03-21 04:34:18,275] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:18,276] {subprocess.py:89} INFO - - ALGT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:18,276] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:18,277] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:18,278] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:18,415] {subprocess.py:89} INFO - 113 : ALIM,
+[2022-03-21 04:34:18,416] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:18,417] {subprocess.py:89} INFO - - ALIM: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:18,418] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:18,418] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:18,419] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:18,619] {subprocess.py:89} INFO - 114 : ALKS,
+[2022-03-21 04:34:18,620] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:18,620] {subprocess.py:89} INFO - - ALKS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:18,621] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:18,621] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:18,622] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:18,780] {subprocess.py:89} INFO - 115 : ALLB,
+[2022-03-21 04:34:18,781] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:18,782] {subprocess.py:89} INFO - - ALLB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:18,783] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:18,784] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:18,784] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:18,952] {subprocess.py:89} INFO - 116 : ALLT,
+[2022-03-21 04:34:18,952] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:18,953] {subprocess.py:89} INFO - - ALLT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:18,954] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:18,955] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:18,956] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:19,093] {subprocess.py:89} INFO - 117 : ALNY,
+[2022-03-21 04:34:19,094] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:19,095] {subprocess.py:89} INFO - - ALNY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:19,095] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:19,096] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:19,096] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:19,302] {subprocess.py:89} INFO - 118 : ALOG,
+[2022-03-21 04:34:19,304] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:19,305] {subprocess.py:89} INFO - - ALOG: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:19,305] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:19,306] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:19,306] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:19,510] {subprocess.py:89} INFO - 119 : ALOT,
+[2022-03-21 04:34:19,511] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:19,511] {subprocess.py:89} INFO - - ALOT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:19,512] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:19,513] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:19,513] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:19,693] {subprocess.py:89} INFO - 120 : ALQA,
+[2022-03-21 04:34:19,694] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:19,698] {subprocess.py:89} INFO - - ALQA: No data found, symbol may be delisted
+[2022-03-21 04:34:19,701] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:19,701] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:19,703] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:19,875] {subprocess.py:89} INFO - 121 : ALSK,
+[2022-03-21 04:34:19,877] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:19,878] {subprocess.py:89} INFO - - ALSK: No data found, symbol may be delisted
+[2022-03-21 04:34:19,879] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:19,880] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:19,880] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:20,053] {subprocess.py:89} INFO - 122 : ALTR,
+[2022-03-21 04:34:20,054] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:20,056] {subprocess.py:89} INFO - - ALTR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:20,057] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:20,058] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:20,059] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:20,232] {subprocess.py:89} INFO - 123 : ALXA,
+[2022-03-21 04:34:20,233] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:20,234] {subprocess.py:89} INFO - - ALXA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:20,235] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:20,236] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:20,237] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:20,414] {subprocess.py:89} INFO - 124 : ALXN,
+[2022-03-21 04:34:20,415] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:20,416] {subprocess.py:89} INFO - - ALXN: No data found, symbol may be delisted
+[2022-03-21 04:34:20,419] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:20,420] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:20,420] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:20,585] {subprocess.py:89} INFO - 125 : AMAG,
+[2022-03-21 04:34:20,586] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:20,588] {subprocess.py:89} INFO - - AMAG: No data found, symbol may be delisted
+[2022-03-21 04:34:20,589] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:20,589] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:20,590] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:20,764] {subprocess.py:89} INFO - 126 : AMAT,
+[2022-03-21 04:34:20,767] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:20,770] {subprocess.py:89} INFO - - AMAT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:20,773] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:20,780] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:20,788] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:20,963] {subprocess.py:89} INFO - 127 : AMBA,
+[2022-03-21 04:34:20,964] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:20,966] {subprocess.py:89} INFO - - AMBA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:20,967] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:20,968] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:20,969] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:21,148] {subprocess.py:89} INFO - 128 : AMBC,
+[2022-03-21 04:34:21,150] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:21,151] {subprocess.py:89} INFO - - AMBC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:21,151] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:21,152] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:21,153] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:21,295] {subprocess.py:89} INFO - 129 : AMBCW,
+[2022-03-21 04:34:21,296] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:21,297] {subprocess.py:89} INFO - - AMBCW: No data found, symbol may be delisted
+[2022-03-21 04:34:21,298] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:21,299] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:21,299] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:21,477] {subprocess.py:89} INFO - 130 : AMCC,
+[2022-03-21 04:34:21,479] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:21,480] {subprocess.py:89} INFO - - AMCC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:21,480] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:21,481] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:21,482] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:21,660] {subprocess.py:89} INFO - 131 : AMCF,
+[2022-03-21 04:34:21,661] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:21,662] {subprocess.py:89} INFO - - AMCF: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:21,662] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:21,663] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:21,664] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:21,813] {subprocess.py:89} INFO - 132 : AMCN,
+[2022-03-21 04:34:21,815] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:21,815] {subprocess.py:89} INFO - - AMCN: No data found, symbol may be delisted
+[2022-03-21 04:34:21,816] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:21,817] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:21,818] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:21,954] {subprocess.py:89} INFO - 133 : AMCX,
+[2022-03-21 04:34:21,955] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:21,956] {subprocess.py:89} INFO - - AMCX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:21,957] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:21,958] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:21,958] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:22,116] {subprocess.py:89} INFO - 134 : AMD,
+[2022-03-21 04:34:22,117] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:22,117] {subprocess.py:89} INFO - - AMD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:22,118] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:22,119] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:22,119] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:22,294] {subprocess.py:89} INFO - 135 : AMDA,
+[2022-03-21 04:34:22,295] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:22,296] {subprocess.py:89} INFO - - AMDA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:22,297] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:22,298] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:22,299] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:22,466] {subprocess.py:89} INFO - 136 : AMED,
+[2022-03-21 04:34:22,468] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:22,468] {subprocess.py:89} INFO - - AMED: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:22,469] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:22,470] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:22,470] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:22,626] {subprocess.py:89} INFO - 137 : AMGN,
+[2022-03-21 04:34:22,627] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:22,628] {subprocess.py:89} INFO - - AMGN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:22,629] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:22,630] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:22,630] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:22,766] {subprocess.py:89} INFO - 138 : AMIC,
+[2022-03-21 04:34:22,767] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:22,768] {subprocess.py:89} INFO - - AMIC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:22,769] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:22,769] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:22,770] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:22,977] {subprocess.py:89} INFO - 139 : AMKR,
+[2022-03-21 04:34:22,980] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:22,981] {subprocess.py:89} INFO - - AMKR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:22,982] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:22,982] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:22,983] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:23,172] {subprocess.py:89} INFO - 140 : AMNB,
+[2022-03-21 04:34:23,173] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:23,174] {subprocess.py:89} INFO - - AMNB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:23,174] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:23,175] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:23,175] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:23,355] {subprocess.py:89} INFO - 141 : AMOT,
+[2022-03-21 04:34:23,356] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:23,357] {subprocess.py:89} INFO - - AMOT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:23,357] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:23,358] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:23,359] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:23,602] {subprocess.py:89} INFO - 142 : AMOV,
+[2022-03-21 04:34:23,603] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:23,604] {subprocess.py:89} INFO - - AMOV: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:23,604] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:23,605] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:23,606] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:23,733] {subprocess.py:89} INFO - 143 : AMPH,
+[2022-03-21 04:34:23,734] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:23,734] {subprocess.py:89} INFO - - AMPH: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:23,735] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:23,735] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:23,736] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:23,924] {subprocess.py:89} INFO - 144 : AMRB,
+[2022-03-21 04:34:23,928] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:23,929] {subprocess.py:89} INFO - - AMRB: No data found, symbol may be delisted
+[2022-03-21 04:34:23,929] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:23,930] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:23,930] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:24,097] {subprocess.py:89} INFO - 145 : AMRI,
+[2022-03-21 04:34:24,098] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:24,099] {subprocess.py:89} INFO - - AMRI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:24,100] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:24,101] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:24,102] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:24,251] {subprocess.py:89} INFO - 146 : AMRK,
+[2022-03-21 04:34:24,252] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:24,253] {subprocess.py:89} INFO - - AMRK: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:24,253] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:24,254] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:24,255] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:24,421] {subprocess.py:89} INFO - 147 : AMRN,
+[2022-03-21 04:34:24,422] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:24,423] {subprocess.py:89} INFO - - AMRN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:24,424] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:24,427] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:24,442] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:24,595] {subprocess.py:89} INFO - 148 : AMRS,
+[2022-03-21 04:34:24,596] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:24,597] {subprocess.py:89} INFO - - AMRS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:24,598] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:24,599] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:24,599] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:24,780] {subprocess.py:89} INFO - 149 : AMSC,
+[2022-03-21 04:34:24,782] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:24,782] {subprocess.py:89} INFO - - AMSC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:24,783] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:24,784] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:24,784] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:24,948] {subprocess.py:89} INFO - 150 : AMSF,
+[2022-03-21 04:34:24,949] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:24,950] {subprocess.py:89} INFO - - AMSF: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:24,951] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:24,952] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:24,952] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:25,098] {subprocess.py:89} INFO - 151 : AMSG,
+[2022-03-21 04:34:25,099] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:25,100] {subprocess.py:89} INFO - - AMSG: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:25,101] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:25,101] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:25,102] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:25,300] {subprocess.py:89} INFO - 152 : AMSGP,
+[2022-03-21 04:34:25,302] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:25,302] {subprocess.py:89} INFO - - AMSGP: No data found, symbol may be delisted
+[2022-03-21 04:34:25,303] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:25,304] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:25,304] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:25,557] {subprocess.py:89} INFO - 153 : AMSWA,
+[2022-03-21 04:34:25,558] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:25,559] {subprocess.py:89} INFO - - AMSWA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:25,560] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:25,560] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:25,561] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:25,727] {subprocess.py:89} INFO - 154 : AMTX,
+[2022-03-21 04:34:25,728] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:25,729] {subprocess.py:89} INFO - - AMTX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:25,730] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:25,731] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:25,731] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:25,922] {subprocess.py:89} INFO - 155 : AMWD,
+[2022-03-21 04:34:25,924] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:25,943] {subprocess.py:89} INFO - - AMWD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:25,944] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:25,945] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:25,963] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:26,113] {subprocess.py:89} INFO - 156 : AMZN,
+[2022-03-21 04:34:26,115] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:26,115] {subprocess.py:89} INFO - - AMZN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:26,116] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:26,117] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:26,117] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:26,322] {subprocess.py:89} INFO - 157 : ANAC,
+[2022-03-21 04:34:26,323] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:26,324] {subprocess.py:89} INFO - - ANAC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:26,325] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:26,326] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:26,327] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:26,492] {subprocess.py:89} INFO - 158 : ANAD,
+[2022-03-21 04:34:26,494] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:26,497] {subprocess.py:89} INFO - - ANAD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:26,498] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:26,499] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:26,500] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:26,709] {subprocess.py:89} INFO - 159 : ANAT,
+[2022-03-21 04:34:26,711] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:26,711] {subprocess.py:89} INFO - - ANAT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:26,712] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:26,713] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:26,713] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:26,917] {subprocess.py:89} INFO - 160 : ANCB,
+[2022-03-21 04:34:26,918] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:26,918] {subprocess.py:89} INFO - - ANCB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:26,919] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:26,920] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:26,921] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:27,053] {subprocess.py:89} INFO - 161 : ANCI,
+[2022-03-21 04:34:27,054] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:27,055] {subprocess.py:89} INFO - - ANCI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:27,056] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:27,056] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:27,057] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:27,216] {subprocess.py:89} INFO - 162 : ANCX,
+[2022-03-21 04:34:27,217] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:27,218] {subprocess.py:89} INFO - - ANCX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:27,218] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:27,219] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:27,220] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:27,553] {subprocess.py:89} INFO - 163 : ANDE,
+[2022-03-21 04:34:27,553] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:27,554] {subprocess.py:89} INFO - - ANDE: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:27,555] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:27,556] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:27,556] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:27,704] {subprocess.py:89} INFO - 164 : ANGI,
+[2022-03-21 04:34:27,705] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:27,706] {subprocess.py:89} INFO - - ANGI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:27,707] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:27,708] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:27,709] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:27,850] {subprocess.py:89} INFO - 165 : ANGO,
+[2022-03-21 04:34:27,851] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:27,852] {subprocess.py:89} INFO - - ANGO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:27,852] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:27,853] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:27,854] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:27,988] {subprocess.py:89} INFO - 166 : ANIK,
+[2022-03-21 04:34:27,989] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:27,990] {subprocess.py:89} INFO - - ANIK: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:27,991] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:27,992] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:27,992] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:28,162] {subprocess.py:89} INFO - 167 : ANIP,
+[2022-03-21 04:34:28,162] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:28,163] {subprocess.py:89} INFO - - ANIP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:28,163] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:28,164] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:28,164] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:28,325] {subprocess.py:89} INFO - 168 : ANSS,
+[2022-03-21 04:34:28,327] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:28,328] {subprocess.py:89} INFO - - ANSS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:28,329] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:28,330] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:28,331] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:28,495] {subprocess.py:89} INFO - 169 : ANTH,
+[2022-03-21 04:34:28,497] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:28,498] {subprocess.py:89} INFO - - ANTH: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:28,499] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:28,499] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:28,500] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:28,635] {subprocess.py:89} INFO - 170 : ANY,
+[2022-03-21 04:34:28,637] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:28,638] {subprocess.py:89} INFO - - ANY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:28,638] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:28,639] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:28,640] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:28,786] {subprocess.py:89} INFO - 171 : AOSL,
+[2022-03-21 04:34:28,787] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:28,788] {subprocess.py:89} INFO - - AOSL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:28,789] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:28,789] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:28,790] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:28,965] {subprocess.py:89} INFO - 172 : APAGF,
+[2022-03-21 04:34:28,967] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:28,968] {subprocess.py:89} INFO - - APAGF: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:28,968] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:28,969] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:28,971] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:29,105] {subprocess.py:89} INFO - 173 : APDN,
+[2022-03-21 04:34:29,106] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:29,107] {subprocess.py:89} INFO - - APDN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:29,108] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:29,109] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:29,109] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:29,279] {subprocess.py:89} INFO - 174 : APDNW,
+[2022-03-21 04:34:29,280] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:29,281] {subprocess.py:89} INFO - - APDNW: No data found, symbol may be delisted
+[2022-03-21 04:34:29,282] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:29,282] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:29,283] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:29,428] {subprocess.py:89} INFO - 175 : APEI,
+[2022-03-21 04:34:29,429] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:29,430] {subprocess.py:89} INFO - - APEI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:29,431] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:29,432] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:29,432] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:29,646] {subprocess.py:89} INFO - 176 : APOG,
+[2022-03-21 04:34:29,647] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:29,648] {subprocess.py:89} INFO - - APOG: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:29,649] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:29,650] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:29,650] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:29,821] {subprocess.py:89} INFO - 177 : APOL,
+[2022-03-21 04:34:29,822] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:29,825] {subprocess.py:89} INFO - - APOL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:29,828] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:29,828] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:29,829] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:30,026] {subprocess.py:89} INFO - 178 : APPY,
+[2022-03-21 04:34:30,030] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:30,031] {subprocess.py:89} INFO - - APPY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:30,031] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:30,032] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:30,032] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:30,191] {subprocess.py:89} INFO - 179 : APRI,
+[2022-03-21 04:34:30,192] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:30,193] {subprocess.py:89} INFO - - APRI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:30,193] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:30,194] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:30,195] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:30,356] {subprocess.py:89} INFO - 180 : APSA,
+[2022-03-21 04:34:30,358] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:30,358] {subprocess.py:89} INFO - - APSA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:30,359] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:30,359] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:30,360] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:30,527] {subprocess.py:89} INFO - 181 : APTO,
+[2022-03-21 04:34:30,528] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:30,528] {subprocess.py:89} INFO - - APTO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:30,530] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:30,531] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:30,531] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:30,692] {subprocess.py:89} INFO - 182 : APWC,
+[2022-03-21 04:34:30,693] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:30,693] {subprocess.py:89} INFO - - APWC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:30,694] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:30,695] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:30,695] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:30,905] {subprocess.py:89} INFO - 183 : AQXP,
+[2022-03-21 04:34:30,909] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:30,910] {subprocess.py:89} INFO - - AQXP: No data found, symbol may be delisted
+[2022-03-21 04:34:30,913] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:30,914] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:30,915] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:31,076] {subprocess.py:89} INFO - 184 : ARAY,
+[2022-03-21 04:34:31,077] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:31,078] {subprocess.py:89} INFO - - ARAY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:31,079] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:31,079] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:31,080] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:31,275] {subprocess.py:89} INFO - 185 : ARCB,
+[2022-03-21 04:34:31,276] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:31,277] {subprocess.py:89} INFO - - ARCB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:31,278] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:31,279] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:31,279] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:31,473] {subprocess.py:89} INFO - 186 : ARCC,
+[2022-03-21 04:34:31,475] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:31,476] {subprocess.py:89} INFO - - ARCC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:31,477] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:31,478] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:31,478] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:31,683] {subprocess.py:89} INFO - 187 : ARCI,
+[2022-03-21 04:34:31,687] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:31,688] {subprocess.py:89} INFO - - ARCI: No data found, symbol may be delisted
+[2022-03-21 04:34:31,688] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:31,689] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:31,690] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:31,856] {subprocess.py:89} INFO - 188 : ARCP,
+[2022-03-21 04:34:31,857] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:31,857] {subprocess.py:89} INFO - - ARCP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:31,858] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:31,858] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:31,859] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:31,992] {subprocess.py:89} INFO - 189 : ARCPP,
+[2022-03-21 04:34:31,993] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:31,994] {subprocess.py:89} INFO - - ARCPP: No data found, symbol may be delisted
+[2022-03-21 04:34:31,995] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:31,996] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:31,997] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:32,204] {subprocess.py:89} INFO - 190 : ARCW,
+[2022-03-21 04:34:32,205] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:32,205] {subprocess.py:89} INFO - - ARCW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:32,206] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:32,207] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:32,207] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:32,357] {subprocess.py:89} INFO - 191 : ARDM,
+[2022-03-21 04:34:32,358] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:32,359] {subprocess.py:89} INFO - - ARDM: No data found, symbol may be delisted
+[2022-03-21 04:34:32,360] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:32,360] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:32,361] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:32,527] {subprocess.py:89} INFO - 192 : ARDX,
+[2022-03-21 04:34:32,528] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:32,528] {subprocess.py:89} INFO - - ARDX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:32,529] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:32,529] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:32,530] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:32,702] {subprocess.py:89} INFO - 193 : AREX,
+[2022-03-21 04:34:32,704] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:32,705] {subprocess.py:89} INFO - - AREX: No data found, symbol may be delisted
+[2022-03-21 04:34:32,706] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:32,707] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:32,707] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:32,873] {subprocess.py:89} INFO - 194 : ARGS,
+[2022-03-21 04:34:32,874] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:32,875] {subprocess.py:89} INFO - - ARGS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:32,876] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:32,876] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:32,877] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:33,041] {subprocess.py:89} INFO - 195 : ARIA,
+[2022-03-21 04:34:33,042] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:33,042] {subprocess.py:89} INFO - - ARIA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:33,043] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:33,044] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:33,045] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:33,199] {subprocess.py:89} INFO - 196 : ARII,
+[2022-03-21 04:34:33,201] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:33,202] {subprocess.py:89} INFO - - ARII: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:33,202] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:33,203] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:33,204] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:33,374] {subprocess.py:89} INFO - 197 : ARIS,
+[2022-03-21 04:34:33,375] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:33,376] {subprocess.py:89} INFO - - ARIS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:33,377] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:33,377] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:33,378] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:33,571] {subprocess.py:89} INFO - 198 : ARKR,
+[2022-03-21 04:34:33,575] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:33,583] {subprocess.py:89} INFO - - ARKR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:33,588] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:33,591] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:33,596] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:33,823] {subprocess.py:89} INFO - 199 : ARLP,
+[2022-03-21 04:34:33,824] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:33,825] {subprocess.py:89} INFO - - ARLP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:33,826] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:33,827] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:33,827] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:33,956] {subprocess.py:89} INFO - 200 : ARMH,
+[2022-03-21 04:34:33,957] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:33,957] {subprocess.py:89} INFO - - ARMH: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:33,958] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:33,959] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:33,959] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:34,095] {subprocess.py:89} INFO - 201 : ARNA,
+[2022-03-21 04:34:34,096] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:34,097] {subprocess.py:89} INFO - - ARNA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:34,097] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:34,098] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:34,098] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:34,298] {subprocess.py:89} INFO - 202 : AROW,
+[2022-03-21 04:34:34,300] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:34,300] {subprocess.py:89} INFO - - AROW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:34,301] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:34,302] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:34,302] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:34,441] {subprocess.py:89} INFO - 203 : ARQL,
+[2022-03-21 04:34:34,443] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:34,444] {subprocess.py:89} INFO - - ARQL: No data found, symbol may be delisted
+[2022-03-21 04:34:34,445] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:34,446] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:34,446] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:34,616] {subprocess.py:89} INFO - 204 : ARRS,
+[2022-03-21 04:34:34,617] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:34,618] {subprocess.py:89} INFO - - ARRS: No data found, symbol may be delisted
+[2022-03-21 04:34:34,619] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:34,619] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:34,620] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:34,792] {subprocess.py:89} INFO - 205 : ARRY,
+[2022-03-21 04:34:34,793] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:34,794] {subprocess.py:89} INFO - - ARRY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:34,795] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:34,795] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:34,796] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:35,029] {subprocess.py:89} INFO - 206 : ARTNA,
+[2022-03-21 04:34:35,029] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:35,030] {subprocess.py:89} INFO - - ARTNA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:35,030] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:35,031] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:35,032] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:35,260] {subprocess.py:89} INFO - 207 : ARTW,
+[2022-03-21 04:34:35,265] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:35,266] {subprocess.py:89} INFO - - ARTW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:35,267] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:35,267] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:35,268] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:35,419] {subprocess.py:89} INFO - 208 : ARTX,
+[2022-03-21 04:34:35,420] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:35,421] {subprocess.py:89} INFO - - ARTX: No data found, symbol may be delisted
+[2022-03-21 04:34:35,421] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:35,422] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:35,422] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:35,589] {subprocess.py:89} INFO - 209 : ARUN,
+[2022-03-21 04:34:35,590] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:35,591] {subprocess.py:89} INFO - - ARUN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:35,592] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:35,592] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:35,593] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:35,760] {subprocess.py:89} INFO - 210 : ARWR,
+[2022-03-21 04:34:35,760] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:35,761] {subprocess.py:89} INFO - - ARWR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:35,761] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:35,762] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:35,762] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:35,919] {subprocess.py:89} INFO - 211 : ASBB,
+[2022-03-21 04:34:35,920] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:35,921] {subprocess.py:89} INFO - - ASBB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:35,921] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:35,922] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:35,923] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:36,116] {subprocess.py:89} INFO - 212 : ASBI,
+[2022-03-21 04:34:36,117] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:36,117] {subprocess.py:89} INFO - - ASBI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:36,118] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:36,118] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:36,119] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:36,298] {subprocess.py:89} INFO - 213 : ASCMA,
+[2022-03-21 04:34:36,298] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:36,299] {subprocess.py:89} INFO - - ASCMA: No data found, symbol may be delisted
+[2022-03-21 04:34:36,299] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:36,300] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:36,301] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:36,472] {subprocess.py:89} INFO - 214 : ASEI,
+[2022-03-21 04:34:36,472] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:36,473] {subprocess.py:89} INFO - - ASEI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:36,474] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:36,475] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:36,475] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:36,692] {subprocess.py:89} INFO - 215 : ASFI,
+[2022-03-21 04:34:36,693] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:36,695] {subprocess.py:89} INFO - - ASFI: No data found, symbol may be delisted
+[2022-03-21 04:34:36,698] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:36,698] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:36,699] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:37,082] {subprocess.py:89} INFO - 216 : ASMB,
+[2022-03-21 04:34:37,083] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:37,084] {subprocess.py:89} INFO - - ASMB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:37,085] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:37,086] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:37,087] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:37,389] {subprocess.py:89} INFO - 217 : ASMI,
+[2022-03-21 04:34:37,390] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:37,391] {subprocess.py:89} INFO - - ASMI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:37,392] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:37,392] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:37,393] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:37,670] {subprocess.py:89} INFO - 218 : ASML,
+[2022-03-21 04:34:37,671] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:37,672] {subprocess.py:89} INFO - - ASML: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:37,673] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:37,673] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:37,674] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:37,954] {subprocess.py:89} INFO - 219 : ASNA,
+[2022-03-21 04:34:37,955] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:37,956] {subprocess.py:89} INFO - - ASNA: No data found, symbol may be delisted
+[2022-03-21 04:34:37,957] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:37,958] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:37,958] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:38,215] {subprocess.py:89} INFO - 220 : ASPS,
+[2022-03-21 04:34:38,216] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:38,217] {subprocess.py:89} INFO - - ASPS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:38,218] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:38,218] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:38,219] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:38,574] {subprocess.py:89} INFO - 221 : ASPX,
+[2022-03-21 04:34:38,575] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:38,576] {subprocess.py:89} INFO - - ASPX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:38,577] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:38,577] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:38,578] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:38,931] {subprocess.py:89} INFO - 222 : ASRV,
+[2022-03-21 04:34:38,932] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:38,932] {subprocess.py:89} INFO - - ASRV: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:38,933] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:38,934] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:38,934] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:39,250] {subprocess.py:89} INFO - 223 : ASRVP,
+[2022-03-21 04:34:39,251] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:39,251] {subprocess.py:89} INFO - - ASRVP: No data found, symbol may be delisted
+[2022-03-21 04:34:39,252] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:39,253] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:39,254] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:39,618] {subprocess.py:89} INFO - 224 : ASTC,
+[2022-03-21 04:34:39,619] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:39,620] {subprocess.py:89} INFO - - ASTC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:39,620] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:39,621] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:39,622] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:39,981] {subprocess.py:89} INFO - 225 : ASTE,
+[2022-03-21 04:34:39,982] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:39,986] {subprocess.py:89} INFO - - ASTE: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:39,987] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:39,989] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:39,990] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:40,308] {subprocess.py:89} INFO - 226 : ASTI,
+[2022-03-21 04:34:40,309] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:40,310] {subprocess.py:89} INFO - - ASTI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:40,311] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:40,312] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:40,312] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:40,638] {subprocess.py:89} INFO - 227 : ASUR,
+[2022-03-21 04:34:40,639] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:40,640] {subprocess.py:89} INFO - - ASUR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:40,641] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:40,642] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:40,642] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:40,813] {subprocess.py:89} INFO - 228 : ASYS,
+[2022-03-21 04:34:40,814] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:40,815] {subprocess.py:89} INFO - - ASYS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:40,816] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:40,816] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:40,817] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:41,016] {subprocess.py:89} INFO - 229 : ATAI,
+[2022-03-21 04:34:41,017] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:41,017] {subprocess.py:89} INFO - - ATAI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:41,018] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:41,019] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:41,019] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:41,472] {subprocess.py:89} INFO - 230 : ATAX,
+[2022-03-21 04:34:41,473] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:41,474] {subprocess.py:89} INFO - - ATAX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:41,475] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:41,476] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:41,477] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:41,648] {subprocess.py:89} INFO - 231 : ATEA,
+[2022-03-21 04:34:41,650] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:41,651] {subprocess.py:89} INFO - - ATEA: No data found, symbol may be delisted
+[2022-03-21 04:34:41,651] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:41,652] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:41,653] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:41,821] {subprocess.py:89} INFO - 232 : ATEC,
+[2022-03-21 04:34:41,822] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:41,823] {subprocess.py:89} INFO - - ATEC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:41,823] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:41,824] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:41,824] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:41,991] {subprocess.py:89} INFO - 233 : ATHN,
+[2022-03-21 04:34:41,993] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:41,994] {subprocess.py:89} INFO - - ATHN: No data found, symbol may be delisted
+[2022-03-21 04:34:41,995] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:41,995] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:41,996] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:42,198] {subprocess.py:89} INFO - 234 : ATHX,
+[2022-03-21 04:34:42,199] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:42,200] {subprocess.py:89} INFO - - ATHX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:42,200] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:42,201] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:42,202] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:42,369] {subprocess.py:89} INFO - 235 : ATLC,
+[2022-03-21 04:34:42,371] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:42,371] {subprocess.py:89} INFO - - ATLC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:42,372] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:42,373] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:42,373] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:42,574] {subprocess.py:89} INFO - 236 : ATLO,
+[2022-03-21 04:34:42,575] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:42,576] {subprocess.py:89} INFO - - ATLO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:42,577] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:42,577] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:42,578] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:42,754] {subprocess.py:89} INFO - 237 : ATML,
+[2022-03-21 04:34:42,755] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:42,755] {subprocess.py:89} INFO - - ATML: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:42,756] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:42,757] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:42,757] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:42,961] {subprocess.py:89} INFO - 238 : ATNI,
+[2022-03-21 04:34:42,962] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:42,963] {subprocess.py:89} INFO - - ATNI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:42,963] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:42,964] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:42,964] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:43,122] {subprocess.py:89} INFO - 239 : ATNY,
+[2022-03-21 04:34:43,123] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:43,123] {subprocess.py:89} INFO - - ATNY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:43,124] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:43,125] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:43,125] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:43,293] {subprocess.py:89} INFO - 240 : ATOS,
+[2022-03-21 04:34:43,295] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:43,295] {subprocess.py:89} INFO - - ATOS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:43,296] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:43,297] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:43,297] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:43,428] {subprocess.py:89} INFO - 241 : ATRA,
+[2022-03-21 04:34:43,429] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:43,430] {subprocess.py:89} INFO - - ATRA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:43,431] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:43,431] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:43,432] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:43,574] {subprocess.py:89} INFO - 242 : ATRC,
+[2022-03-21 04:34:43,575] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:43,576] {subprocess.py:89} INFO - - ATRC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:43,576] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:43,577] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:43,577] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:43,756] {subprocess.py:89} INFO - 243 : ATRI,
+[2022-03-21 04:34:43,757] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:43,757] {subprocess.py:89} INFO - - ATRI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:43,758] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:43,759] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:43,759] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:43,947] {subprocess.py:89} INFO - 244 : ATRM,
+[2022-03-21 04:34:43,948] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:43,949] {subprocess.py:89} INFO - - ATRM: No data found, symbol may be delisted
+[2022-03-21 04:34:43,950] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:43,951] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:43,951] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:44,160] {subprocess.py:89} INFO - 245 : ATRO,
+[2022-03-21 04:34:44,162] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:44,162] {subprocess.py:89} INFO - - ATRO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:44,163] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:44,164] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:44,164] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:44,361] {subprocess.py:89} INFO - 246 : ATRS,
+[2022-03-21 04:34:44,363] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:44,364] {subprocess.py:89} INFO - - ATRS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:44,365] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:44,366] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:44,367] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:44,547] {subprocess.py:89} INFO - 247 : ATSG,
+[2022-03-21 04:34:44,548] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:44,548] {subprocess.py:89} INFO - - ATSG: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:44,549] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:44,550] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:44,551] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:44,721] {subprocess.py:89} INFO - 248 : ATTU,
+[2022-03-21 04:34:44,722] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:44,723] {subprocess.py:89} INFO - - ATTU: No data found, symbol may be delisted
+[2022-03-21 04:34:44,724] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:44,725] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:44,725] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:44,909] {subprocess.py:89} INFO - 249 : ATVI,
+[2022-03-21 04:34:44,912] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:44,913] {subprocess.py:89} INFO - - ATVI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:44,914] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:44,915] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:44,916] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:45,117] {subprocess.py:89} INFO - 250 : AUBN,
+[2022-03-21 04:34:45,118] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:45,119] {subprocess.py:89} INFO - - AUBN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:45,120] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:45,120] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:45,121] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:45,295] {subprocess.py:89} INFO - 251 : AUDC,
+[2022-03-21 04:34:45,296] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:45,297] {subprocess.py:89} INFO - - AUDC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:45,297] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:45,298] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:45,299] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:45,467] {subprocess.py:89} INFO - 252 : AUMA,
+[2022-03-21 04:34:45,468] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:45,469] {subprocess.py:89} INFO - - AUMA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:45,470] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:45,471] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:45,472] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:45,651] {subprocess.py:89} INFO - 253 : AUMAU,
+[2022-03-21 04:34:45,652] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:45,653] {subprocess.py:89} INFO - - AUMAU: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:45,654] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:45,655] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:45,656] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:45,838] {subprocess.py:89} INFO - 254 : AUMAW,
+[2022-03-21 04:34:45,839] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:45,840] {subprocess.py:89} INFO - - AUMAW: No data found, symbol may be delisted
+[2022-03-21 04:34:45,841] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:45,842] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:45,843] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:46,018] {subprocess.py:89} INFO - 255 : AUPH,
+[2022-03-21 04:34:46,019] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:46,020] {subprocess.py:89} INFO - - AUPH: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:46,021] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:46,021] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:46,022] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:46,201] {subprocess.py:89} INFO - 256 : AUXL,
+[2022-03-21 04:34:46,202] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:46,203] {subprocess.py:89} INFO - - AUXL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:46,203] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:46,204] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:46,205] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:46,374] {subprocess.py:89} INFO - 257 : AVAV,
+[2022-03-21 04:34:46,375] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:46,375] {subprocess.py:89} INFO - - AVAV: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:46,377] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:46,378] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:46,378] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:46,583] {subprocess.py:89} INFO - 258 : AVEO,
+[2022-03-21 04:34:46,584] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:46,585] {subprocess.py:89} INFO - - AVEO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:46,586] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:46,587] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:46,587] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:46,773] {subprocess.py:89} INFO - 259 : AVGO,
+[2022-03-21 04:34:46,774] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:46,775] {subprocess.py:89} INFO - - AVGO: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:46,776] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:46,777] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:46,778] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:46,943] {subprocess.py:89} INFO - 260 : AVHI,
+[2022-03-21 04:34:46,944] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:46,946] {subprocess.py:89} INFO - - AVHI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:46,946] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:46,947] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:46,947] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:47,127] {subprocess.py:89} INFO - 261 : AVID,
+[2022-03-21 04:34:47,128] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:47,128] {subprocess.py:89} INFO - - AVID: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:47,129] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:47,129] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:47,130] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:47,320] {subprocess.py:89} INFO - 262 : AVNR,
+[2022-03-21 04:34:47,321] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:47,322] {subprocess.py:89} INFO - - AVNR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:47,322] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:47,323] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:47,323] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:47,512] {subprocess.py:89} INFO - 263 : AVNW,
+[2022-03-21 04:34:47,514] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:47,514] {subprocess.py:89} INFO - - AVNW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:47,515] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:47,515] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:47,516] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:47,684] {subprocess.py:89} INFO - 264 : AWAY,
+[2022-03-21 04:34:47,685] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:47,686] {subprocess.py:89} INFO - - AWAY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:47,687] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:47,687] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:47,688] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:47,861] {subprocess.py:89} INFO - 265 : AWRE,
+[2022-03-21 04:34:47,862] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:47,863] {subprocess.py:89} INFO - - AWRE: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:47,864] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:47,864] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:47,865] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:47,998] {subprocess.py:89} INFO - 266 : AXAS,
+[2022-03-21 04:34:47,999] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:48,000] {subprocess.py:89} INFO - - AXAS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:48,001] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:48,001] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:48,002] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:48,202] {subprocess.py:89} INFO - 267 : AXDX,
+[2022-03-21 04:34:48,203] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:48,203] {subprocess.py:89} INFO - - AXDX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:48,204] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:48,205] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:48,205] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:48,405] {subprocess.py:89} INFO - 268 : AXGN,
+[2022-03-21 04:34:48,406] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:48,407] {subprocess.py:89} INFO - - AXGN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:48,408] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:48,409] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:48,410] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:48,581] {subprocess.py:89} INFO - 269 : AXJS,
+[2022-03-21 04:34:48,583] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:48,584] {subprocess.py:89} INFO - - AXJS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:48,584] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:48,585] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:48,586] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:48,752] {subprocess.py:89} INFO - 270 : AXPW,
+[2022-03-21 04:34:48,754] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:48,755] {subprocess.py:89} INFO - - AXPW: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:48,756] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:48,757] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:48,758] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:48,903] {subprocess.py:89} INFO - 271 : AXPWW,
+[2022-03-21 04:34:48,904] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:48,905] {subprocess.py:89} INFO - - AXPWW: No data found, symbol may be delisted
+[2022-03-21 04:34:48,906] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:48,907] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:48,908] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:49,104] {subprocess.py:89} INFO - 272 : AXTI,
+[2022-03-21 04:34:49,106] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:49,107] {subprocess.py:89} INFO - - AXTI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:49,107] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:49,108] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:49,109] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:49,286] {subprocess.py:89} INFO - 273 : AZPN,
+[2022-03-21 04:34:49,287] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:49,288] {subprocess.py:89} INFO - - AZPN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:49,289] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:49,290] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:49,290] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:49,460] {subprocess.py:89} INFO - 274 : BABY,
+[2022-03-21 04:34:49,461] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:49,463] {subprocess.py:89} INFO - - BABY: No data found, symbol may be delisted
+[2022-03-21 04:34:49,464] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:49,464] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:49,465] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:49,668] {subprocess.py:89} INFO - 275 : BAGR,
+[2022-03-21 04:34:49,669] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:49,670] {subprocess.py:89} INFO - - BAGR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:49,672] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:49,672] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:49,673] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:49,875] {subprocess.py:89} INFO - 276 : BAMM,
+[2022-03-21 04:34:49,876] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:49,877] {subprocess.py:89} INFO - - BAMM: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:49,878] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:49,878] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:49,879] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:50,094] {subprocess.py:89} INFO - 277 : BANF,
+[2022-03-21 04:34:50,098] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:50,099] {subprocess.py:89} INFO - - BANF: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:50,099] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:50,100] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:50,100] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:50,321] {subprocess.py:89} INFO - 278 : BANFP,
+[2022-03-21 04:34:50,322] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:50,323] {subprocess.py:89} INFO - - BANFP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:50,324] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:50,325] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:50,325] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:50,535] {subprocess.py:89} INFO - 279 : BANR,
+[2022-03-21 04:34:50,536] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:50,537] {subprocess.py:89} INFO - - BANR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:50,538] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:50,538] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:50,539] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:50,755] {subprocess.py:89} INFO - 280 : BANX,
+[2022-03-21 04:34:50,756] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:50,757] {subprocess.py:89} INFO - - BANX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:50,757] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:50,758] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:50,758] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:50,931] {subprocess.py:89} INFO - 281 : BASI,
+[2022-03-21 04:34:50,933] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:50,934] {subprocess.py:89} INFO - - BASI: No data found, symbol may be delisted
+[2022-03-21 04:34:50,934] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:50,935] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:50,936] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:51,136] {subprocess.py:89} INFO - 282 : BBBY,
+[2022-03-21 04:34:51,137] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:51,137] {subprocess.py:89} INFO - - BBBY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:51,138] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:51,138] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:51,139] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:51,306] {subprocess.py:89} INFO - 283 : BBC,
+[2022-03-21 04:34:51,307] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:51,308] {subprocess.py:89} INFO - - BBC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:51,308] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:51,309] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:51,309] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:51,516] {subprocess.py:89} INFO - 284 : BBCN,
+[2022-03-21 04:34:51,517] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:51,518] {subprocess.py:89} INFO - - BBCN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:51,518] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:51,519] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:51,519] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:51,687] {subprocess.py:89} INFO - 285 : BBEP,
+[2022-03-21 04:34:51,689] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:51,690] {subprocess.py:89} INFO - - BBEP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:51,691] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:51,691] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:51,692] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:51,830] {subprocess.py:89} INFO - 286 : BBEPP,
+[2022-03-21 04:34:51,831] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:51,832] {subprocess.py:89} INFO - - BBEPP: No data found, symbol may be delisted
+[2022-03-21 04:34:51,833] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:51,833] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:51,834] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:52,019] {subprocess.py:89} INFO - 287 : BBGI,
+[2022-03-21 04:34:52,020] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:52,020] {subprocess.py:89} INFO - - BBGI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:52,021] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:52,021] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:52,021] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:52,220] {subprocess.py:89} INFO - 288 : BBLU,
+[2022-03-21 04:34:52,222] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:52,222] {subprocess.py:89} INFO - - BBLU: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:52,223] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:52,224] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:52,224] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:52,392] {subprocess.py:89} INFO - 289 : BBNK,
+[2022-03-21 04:34:52,394] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:52,394] {subprocess.py:89} INFO - - BBNK: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:52,395] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:52,396] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:52,396] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:52,583] {subprocess.py:89} INFO - 290 : BBOX,
+[2022-03-21 04:34:52,584] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:52,585] {subprocess.py:89} INFO - - BBOX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:52,585] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:52,586] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:52,587] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:52,756] {subprocess.py:89} INFO - 291 : BBP,
+[2022-03-21 04:34:52,757] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:52,758] {subprocess.py:89} INFO - - BBP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:52,759] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:52,760] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:52,760] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:52,975] {subprocess.py:89} INFO - 292 : BBRG,
+[2022-03-21 04:34:52,977] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:52,977] {subprocess.py:89} INFO - - BBRG: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:52,978] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:52,979] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:52,979] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:53,112] {subprocess.py:89} INFO - 293 : BBRY,
+[2022-03-21 04:34:53,114] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:53,114] {subprocess.py:89} INFO - - BBRY: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:53,115] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:53,116] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:53,116] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:53,306] {subprocess.py:89} INFO - 294 : BBSI,
+[2022-03-21 04:34:53,307] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:53,308] {subprocess.py:89} INFO - - BBSI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:53,309] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:53,310] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:53,310] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:53,536] {subprocess.py:89} INFO - 295 : BCBP,
+[2022-03-21 04:34:53,538] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:53,539] {subprocess.py:89} INFO - - BCBP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:53,540] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:53,540] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:53,541] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:53,721] {subprocess.py:89} INFO - 296 : BCLI,
+[2022-03-21 04:34:53,722] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:53,723] {subprocess.py:89} INFO - - BCLI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:53,724] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:53,724] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:53,725] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:53,876] {subprocess.py:89} INFO - 297 : BCOM,
+[2022-03-21 04:34:53,877] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:53,878] {subprocess.py:89} INFO - - BCOM: No data found, symbol may be delisted
+[2022-03-21 04:34:53,879] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:53,880] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:53,880] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:54,026] {subprocess.py:89} INFO - 298 : BCOR,
+[2022-03-21 04:34:54,027] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:54,027] {subprocess.py:89} INFO - - BCOR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:54,028] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:54,028] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:54,029] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:54,198] {subprocess.py:89} INFO - 299 : BCOV,
+[2022-03-21 04:34:54,199] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:54,199] {subprocess.py:89} INFO - - BCOV: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:54,200] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:54,201] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:54,202] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:54,415] {subprocess.py:89} INFO - 300 : BCPC,
+[2022-03-21 04:34:54,416] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:54,416] {subprocess.py:89} INFO - - BCPC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:54,417] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:54,418] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:54,418] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:54,585] {subprocess.py:89} INFO - 301 : BCRX,
+[2022-03-21 04:34:54,586] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:54,587] {subprocess.py:89} INFO - - BCRX: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:54,587] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:54,588] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:54,588] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:54,754] {subprocess.py:89} INFO - 302 : BDBD,
+[2022-03-21 04:34:54,755] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:54,756] {subprocess.py:89} INFO - - BDBD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:54,756] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:54,757] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:54,757] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:54,924] {subprocess.py:89} INFO - 303 : BDCV,
+[2022-03-21 04:34:54,925] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:54,926] {subprocess.py:89} INFO - - BDCV: No data found, symbol may be delisted
+[2022-03-21 04:34:54,926] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:54,927] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:54,928] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:55,054] {subprocess.py:89} INFO - 304 : BDE,
+[2022-03-21 04:34:55,055] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:55,056] {subprocess.py:89} INFO - - BDE: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:55,056] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:55,057] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:55,057] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:55,214] {subprocess.py:89} INFO - 305 : BDGE,
+[2022-03-21 04:34:55,215] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:55,216] {subprocess.py:89} INFO - - BDGE: No data found, symbol may be delisted
+[2022-03-21 04:34:55,216] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:55,217] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:55,217] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:55,401] {subprocess.py:89} INFO - 306 : BDMS,
+[2022-03-21 04:34:55,402] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:55,403] {subprocess.py:89} INFO - - BDMS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:55,404] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:55,405] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:55,405] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:55,549] {subprocess.py:89} INFO - 307 : BDSI,
+[2022-03-21 04:34:55,555] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:55,555] {subprocess.py:89} INFO - - BDSI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:55,556] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:55,556] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:55,557] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:55,718] {subprocess.py:89} INFO - 308 : BEAT,
+[2022-03-21 04:34:55,719] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:55,721] {subprocess.py:89} INFO - - BEAT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:55,722] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:55,723] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:55,723] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:55,938] {subprocess.py:89} INFO - 309 : BEAV,
+[2022-03-21 04:34:55,939] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:55,940] {subprocess.py:89} INFO - - BEAV: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:55,941] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:55,942] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:55,943] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:56,160] {subprocess.py:89} INFO - 310 : BEBE,
+[2022-03-21 04:34:56,161] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:56,162] {subprocess.py:89} INFO - - BEBE: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:56,163] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:56,173] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:56,174] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:56,338] {subprocess.py:89} INFO - 311 : BECN,
+[2022-03-21 04:34:56,339] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:56,340] {subprocess.py:89} INFO - - BECN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:56,340] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:56,341] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:56,342] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:56,536] {subprocess.py:89} INFO - 312 : BELFA,
+[2022-03-21 04:34:56,537] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:56,538] {subprocess.py:89} INFO - - BELFA: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:56,539] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:56,540] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:56,540] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:56,731] {subprocess.py:89} INFO - 313 : BELFB,
+[2022-03-21 04:34:56,733] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:56,733] {subprocess.py:89} INFO - - BELFB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:56,735] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:56,736] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:56,736] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:56,934] {subprocess.py:89} INFO - 314 : BFIN,
+[2022-03-21 04:34:56,935] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:56,936] {subprocess.py:89} INFO - - BFIN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:56,937] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:56,938] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:56,939] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:57,131] {subprocess.py:89} INFO - 315 : BGCP,
+[2022-03-21 04:34:57,133] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:57,134] {subprocess.py:89} INFO - - BGCP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:57,135] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:57,136] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:57,137] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:57,325] {subprocess.py:89} INFO - 316 : BGFV,
+[2022-03-21 04:34:57,326] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:57,327] {subprocess.py:89} INFO - - BGFV: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:57,327] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:57,329] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:57,329] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:57,507] {subprocess.py:89} INFO - 317 : BGMD,
+[2022-03-21 04:34:57,508] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:57,509] {subprocess.py:89} INFO - - BGMD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:57,509] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:57,510] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:57,511] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:57,671] {subprocess.py:89} INFO - 318 : BHBK,
+[2022-03-21 04:34:57,671] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:57,672] {subprocess.py:89} INFO - - BHBK: No data found, symbol may be delisted
+[2022-03-21 04:34:57,673] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:57,674] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:57,674] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:57,847] {subprocess.py:89} INFO - 319 : BIB,
+[2022-03-21 04:34:57,848] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:57,848] {subprocess.py:89} INFO - - BIB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:57,849] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:57,850] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:57,850] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:58,035] {subprocess.py:89} INFO - 320 : BICK,
+[2022-03-21 04:34:58,035] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:58,036] {subprocess.py:89} INFO - - BICK: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:58,037] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:58,038] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:58,038] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:58,214] {subprocess.py:89} INFO - 321 : BIDU,
+[2022-03-21 04:34:58,215] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:58,216] {subprocess.py:89} INFO - - BIDU: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:58,217] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:58,218] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:58,218] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:58,388] {subprocess.py:89} INFO - 322 : BIIB,
+[2022-03-21 04:34:58,389] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:58,390] {subprocess.py:89} INFO - - BIIB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:58,391] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:58,392] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:58,392] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:58,603] {subprocess.py:89} INFO - 323 : BIND,
+[2022-03-21 04:34:58,608] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:58,611] {subprocess.py:89} INFO - - BIND: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:58,612] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:58,613] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:58,613] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:58,815] {subprocess.py:89} INFO - 324 : BIOC,
+[2022-03-21 04:34:58,816] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:58,816] {subprocess.py:89} INFO - - BIOC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:58,817] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:58,818] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:58,818] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:58,954] {subprocess.py:89} INFO - 325 : BIOD,
+[2022-03-21 04:34:58,955] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:58,956] {subprocess.py:89} INFO - - BIOD: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:58,957] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:58,957] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:58,958] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:59,157] {subprocess.py:89} INFO - 326 : BIOL,
+[2022-03-21 04:34:59,158] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:59,159] {subprocess.py:89} INFO - - BIOL: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:59,160] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:59,160] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:59,161] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:59,309] {subprocess.py:89} INFO - 327 : BIOS,
+[2022-03-21 04:34:59,310] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:59,311] {subprocess.py:89} INFO - - BIOS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:59,312] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:59,312] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:59,313] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:59,450] {subprocess.py:89} INFO - 328 : BIRT,
+[2022-03-21 04:34:59,450] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:59,451] {subprocess.py:89} INFO - - BIRT: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:59,451] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:59,452] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:59,452] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:59,618] {subprocess.py:89} INFO - 329 : BIS,
+[2022-03-21 04:34:59,619] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:59,619] {subprocess.py:89} INFO - - BIS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:59,620] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:59,621] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:59,621] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:59,790] {subprocess.py:89} INFO - 330 : BJRI,
+[2022-03-21 04:34:59,790] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:59,791] {subprocess.py:89} INFO - - BJRI: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:59,792] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:59,792] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:59,793] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:34:59,946] {subprocess.py:89} INFO - 331 : BKCC,
+[2022-03-21 04:34:59,947] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:34:59,947] {subprocess.py:89} INFO - - BKCC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:34:59,948] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:34:59,949] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:34:59,949] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:00,170] {subprocess.py:89} INFO - 332 : BKEP,
+[2022-03-21 04:35:00,171] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:00,172] {subprocess.py:89} INFO - - BKEP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:00,172] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:00,173] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:00,174] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:01,129] {subprocess.py:89} INFO - 333 : BKEPP,
+[2022-03-21 04:35:01,130] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:01,132] {subprocess.py:89} INFO - - BKEPP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:01,135] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:01,137] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:01,137] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:01,642] {subprocess.py:89} INFO - 334 : BKMU,
+[2022-03-21 04:35:01,644] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:01,645] {subprocess.py:89} INFO - - BKMU: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:01,646] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:01,646] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:01,647] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:02,768] {subprocess.py:89} INFO - 335 : BKSC,
+[2022-03-21 04:35:02,769] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:02,770] {subprocess.py:89} INFO - - BKSC: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:02,771] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:02,771] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:02,772] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:03,218] {subprocess.py:89} INFO - 336 : BKYF,
+[2022-03-21 04:35:03,220] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:03,220] {subprocess.py:89} INFO - - BKYF: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:03,221] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:03,222] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:03,222] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:03,791] {subprocess.py:89} INFO - 337 : BLCM,
+[2022-03-21 04:35:03,792] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:03,793] {subprocess.py:89} INFO - - BLCM: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:03,794] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:03,794] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:03,795] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:04,330] {subprocess.py:89} INFO - 338 : BLDP,
+[2022-03-21 04:35:04,331] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:04,332] {subprocess.py:89} INFO - - BLDP: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:04,333] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:04,334] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:04,335] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:04,920] {subprocess.py:89} INFO - 339 : BLDR,
+[2022-03-21 04:35:04,921] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:04,922] {subprocess.py:89} INFO - - BLDR: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:04,923] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:04,923] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:04,924] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:05,396] {subprocess.py:89} INFO - 340 : BLFS,
+[2022-03-21 04:35:05,398] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:05,399] {subprocess.py:89} INFO - - BLFS: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:05,400] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:05,401] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:05,402] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:05,947] {subprocess.py:89} INFO - 341 : BLIN,
+[2022-03-21 04:35:05,948] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:05,948] {subprocess.py:89} INFO - - BLIN: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:05,949] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:05,950] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:05,951] {subprocess.py:89} INFO - Index: []
+[2022-03-21 04:35:06,594] {subprocess.py:89} INFO - 342 : BLKB,
+[2022-03-21 04:35:06,597] {subprocess.py:89} INFO - 1 Failed download:
+[2022-03-21 04:35:06,598] {subprocess.py:89} INFO - - BLKB: No data found for this date range, symbol may be delisted
+[2022-03-21 04:35:06,599] {subprocess.py:89} INFO - Empty DataFrame
+[2022-03-21 04:35:06,600] {subprocess.py:89} INFO - Columns: [Open, High, Low, Close, Adj Close, Volume]
+[2022-03-21 04:35:06,601] {subprocess.py:89} INFO - Index: []

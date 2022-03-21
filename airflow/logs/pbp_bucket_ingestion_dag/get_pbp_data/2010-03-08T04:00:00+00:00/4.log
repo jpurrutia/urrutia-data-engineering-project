@@ -1,0 +1,24 @@
+[2022-03-18 04:46:41,118] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-03-08T04:00:00+00:00 [None]>
+[2022-03-18 04:46:41,187] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-03-08T04:00:00+00:00 [None]>
+[2022-03-18 04:46:41,190] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-18 04:46:41,192] {taskinstance.py:1239} INFO - Starting attempt 4 of 5
+[2022-03-18 04:46:41,193] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-18 04:46:41,301] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): get_pbp_data> on 2010-03-08 04:00:00+00:00
+[2022-03-18 04:46:41,337] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pbp_bucket_ingestion_dag', 'get_pbp_data', 'scheduled__2010-03-08T04:00:00+00:00', '--job-id', '6306', '--raw', '--subdir', 'DAGS_FOLDER/pbp_ingestion_dag.py', '--cfg-path', '/tmp/tmpm3iabr0u', '--error-file', '/tmp/tmpcd0o2vch']
+[2022-03-18 04:46:41,325] {standard_task_runner.py:52} INFO - Started process 636 to run task
+[2022-03-18 04:46:41,373] {standard_task_runner.py:77} INFO - Job 6306: Subtask get_pbp_data
+[2022-03-18 04:46:41,610] {logging_mixin.py:109} INFO - Running <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-03-08T04:00:00+00:00 [running]> on host a2ba0547c319
+[2022-03-18 04:46:41,816] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pbp_bucket_ingestion_dag
+AIRFLOW_CTX_TASK_ID=get_pbp_data
+AIRFLOW_CTX_EXECUTION_DATE=2010-03-08T04:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2010-03-08T04:00:00+00:00
+[2022-03-18 04:47:52,987] {python.py:175} INFO - Done. Returned value was: None
+[2022-03-18 04:47:53,024] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=pbp_bucket_ingestion_dag, task_id=get_pbp_data, execution_date=20100308T040000, start_date=20220318T044641, end_date=20220318T044753
+[2022-03-18 04:47:53,218] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-03-18 04:47:53,278] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-03-18 04:47:53,306] {dagrun.py:545} INFO - Marking run <DagRun pbp_bucket_ingestion_dag @ 2010-03-08 04:00:00+00:00: scheduled__2010-03-08T04:00:00+00:00, externally triggered: False> successful
+[2022-03-18 04:47:53,311] {dagrun.py:605} INFO - DagRun Finished: dag_id=pbp_bucket_ingestion_dag, execution_date=2010-03-08 04:00:00+00:00, run_id=scheduled__2010-03-08T04:00:00+00:00, run_start_date=2022-03-18 04:46:37.687250+00:00, run_end_date=2022-03-18 04:47:53.311296+00:00, run_duration=75.624046, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2010-03-08 04:00:00+00:00, data_interval_end=2010-03-09 04:00:00+00:00, dag_hash=863fe03ba9371d92690c07e577d012e1

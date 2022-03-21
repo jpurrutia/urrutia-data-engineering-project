@@ -1,0 +1,65 @@
+[2022-03-16 23:06:58,535] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-05-03T04:00:00+00:00 [queued]>
+[2022-03-16 23:06:58,630] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-05-03T04:00:00+00:00 [queued]>
+[2022-03-16 23:06:58,632] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-16 23:06:58,634] {taskinstance.py:1239} INFO - Starting attempt 2 of 2
+[2022-03-16 23:06:58,635] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-03-16 23:06:58,756] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): get_pbp_data> on 2010-05-03 04:00:00+00:00
+[2022-03-16 23:06:58,789] {standard_task_runner.py:52} INFO - Started process 579 to run task
+[2022-03-16 23:06:58,867] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'pbp_bucket_ingestion_dag', 'get_pbp_data', 'scheduled__2010-05-03T04:00:00+00:00', '--job-id', '3842', '--raw', '--subdir', 'DAGS_FOLDER/pbp_ingestion_dag.py', '--cfg-path', '/tmp/tmpq902i2rh', '--error-file', '/tmp/tmpf5aj07kp']
+[2022-03-16 23:06:58,879] {standard_task_runner.py:77} INFO - Job 3842: Subtask get_pbp_data
+[2022-03-16 23:06:59,412] {logging_mixin.py:109} INFO - Running <TaskInstance: pbp_bucket_ingestion_dag.get_pbp_data scheduled__2010-05-03T04:00:00+00:00 [running]> on host ea541d6b6386
+[2022-03-16 23:06:59,739] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=pbp_bucket_ingestion_dag
+AIRFLOW_CTX_TASK_ID=get_pbp_data
+AIRFLOW_CTX_EXECUTION_DATE=2010-05-03T04:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2010-05-03T04:00:00+00:00
+[2022-03-16 23:07:00,213] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/pbp_ingestion_dag.py", line 63, in get_pbp_data
+    for game in games['dates'][0]['games']:
+KeyError: 'dates'
+[2022-03-16 23:07:00,278] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=pbp_bucket_ingestion_dag, task_id=get_pbp_data, execution_date=20100503T040000, start_date=20220316T230658, end_date=20220316T230700
+[2022-03-16 23:07:00,333] {standard_task_runner.py:92} ERROR - Failed to execute job 3842 for task get_pbp_data
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/pbp_ingestion_dag.py", line 63, in get_pbp_data
+    for game in games['dates'][0]['games']:
+KeyError: 'dates'
+[2022-03-16 23:07:00,400] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-03-16 23:07:01,069] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
